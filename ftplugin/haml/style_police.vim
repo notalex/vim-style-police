@@ -16,7 +16,7 @@ if !exists('b:style_police_extra_args')
 endif
 let b:options             = b:style_police_extra_args
 
-command! StylePoliceCheck call style_police_stash#StyleChecker()
+command! HamlLint call style_police_stash#StyleChecker()
 
 let &cpo= s:keepcpo
 unlet s:keepcpo
