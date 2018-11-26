@@ -16,7 +16,8 @@ if !exists('b:style_police_extra_args')
 endif
 let b:options             = ' ' . b:style_police_extra_args . ' --format emacs'
 
-command! RuboCop call style_police_stash#StyleChecker()
+command! RuboCop call style_police_stash#StyleChecker(0)
+command! RuboCopAll call style_police_stash#StyleChecker(1)
 
 let &cpo= s:keepcpo
 unlet s:keepcpo
