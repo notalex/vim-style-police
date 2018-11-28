@@ -18,6 +18,7 @@ let b:options             = ' ' . b:style_police_extra_args . ' --format emacs'
 
 command! RuboCop call style_police_stash#StyleChecker(0)
 command! RuboCopAll call style_police_stash#StyleChecker(1)
+command! RuboCopTmux call style_police_stash#StyleCheckerTmux()
 
 let &cpo= s:keepcpo
 unlet s:keepcpo

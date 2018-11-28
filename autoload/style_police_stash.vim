@@ -15,3 +15,9 @@ function! style_police_stash#StyleChecker(all_files)
   cexpr parseable_output
   copen
 endfunction
+
+function! style_police_stash#StyleCheckerTmux()
+  let command            = b:style_police_command
+  let filename           = @%
+  call system("tmux send-key -t 7 '" . command . ' -D ' . b:options . ' ' . filename . "' Enter")
+endfunction
