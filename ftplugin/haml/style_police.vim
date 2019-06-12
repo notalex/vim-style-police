@@ -8,7 +8,7 @@ let s:keepcpo             = &cpo
 set cpo&vim
 
 if !exists('b:style_police_command')
-  let b:style_police_command = 'haml-lint'
+  let b:style_police_command = 'bundle exec haml-lint'
 endif
 
 if !exists('b:style_police_extra_args')

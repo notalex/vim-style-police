@@ -8,7 +8,7 @@ let s:keepcpo             = &cpo
 set cpo&vim
 
 if !exists('b:style_police_command')
-  let b:style_police_command = 'rubocop'
+  let b:style_police_command = 'bundle exec rubocop'
 endif
 
 if !exists('b:style_police_extra_args')
